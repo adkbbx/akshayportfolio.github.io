@@ -44,7 +44,8 @@
     if (!greetingShown) {
       greetingShown = true;
       setTimeout(() => {
-        appendMessage('ai', "Hi! I'm Akshay's AI assistant. Ask me anything about his background, projects, or skills — or how to get in touch.");
+        const msg = window.__i18n ? window.__i18n.t('chat.greeting') : "Hi! I'm Akshay's AI assistant. Ask me anything about his background, projects, or skills — or how to get in touch.";
+        appendMessage('ai', msg);
       }, 200);
     }
 
@@ -145,12 +146,13 @@
       const response = await fetch(WORKER_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ model: MODEL, messages, stream: true })
+        body: JSON.stringify({ model: MODEL, messages, stream: true, lang: window.__currentLang || 'en' })
       });
 
       if (response.status === 429) {
         removeTyping();
-        appendMessage('ai', "You've sent a lot of messages! Please wait a minute before trying again.");
+        const msg = window.__i18n ? window.__i18n.t('chat.error-ratelimit') : "You've sent a lot of messages! Please wait a minute before trying again.";
+        appendMessage('ai', msg);
         return;
       }
 
@@ -220,9 +222,11 @@
       removeTyping();
 
       if (!navigator.onLine) {
-        appendMessage('ai', "It looks like you're offline. Please check your connection and try again.");
+        const msg = window.__i18n ? window.__i18n.t('chat.error-offline') : "It looks like you're offline. Please check your connection and try again.";
+        appendMessage('ai', msg);
       } else {
-        appendMessage('ai', "Sorry, I'm having trouble connecting right now. Please try again in a moment, or reach out directly via the contact links below.");
+        const msg = window.__i18n ? window.__i18n.t('chat.error-generic') : "Sorry, I'm having trouble connecting right now. Please try again in a moment, or reach out directly via the contact links below.";
+        appendMessage('ai', msg);
       }
     } finally {
       isStreaming = false;

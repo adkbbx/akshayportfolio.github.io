@@ -148,7 +148,7 @@
   const typed = select('.typed');
   if (typed) {
     let strings = typed.getAttribute('data-typed-items').split(',').map(s => s.trim());
-    new Typed('.typed', {
+    window.__typedInstance = new Typed('.typed', {
       strings,
       loop: true,
       typeSpeed: 80,

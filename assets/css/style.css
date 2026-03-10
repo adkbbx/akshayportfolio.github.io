@@ -291,6 +291,36 @@ li { margin-bottom: 0.5em; }
   border-color: var(--border-strong);
 }
 
+.lang-toggle {
+  background: none;
+  border: 1px solid var(--border-default);
+  color: var(--text-secondary);
+  height: 36px;
+  padding: 0 10px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+  transition: color var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast);
+}
+
+.lang-toggle:hover {
+  color: var(--text-primary);
+  background: var(--bg-surface);
+  border-color: var(--border-strong);
+}
+
+/* Japanese font support */
+html[data-lang="ja"] body {
+  font-family: 'Noto Sans JP', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
 .mobile-nav-toggle {
   display: none;
   background: none;
