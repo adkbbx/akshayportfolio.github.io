@@ -10,6 +10,35 @@
   };
 
   /**
+   * Light / Dark theme toggle
+   */
+  const themeToggle = select('.theme-toggle');
+  const themeIcon = themeToggle && themeToggle.querySelector('i');
+
+  const applyTheme = (theme) => {
+    if (theme === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+      if (themeIcon) { themeIcon.classList.remove('bi-moon'); themeIcon.classList.add('bi-sun'); }
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+      if (themeIcon) { themeIcon.classList.remove('bi-sun'); themeIcon.classList.add('bi-moon'); }
+    }
+  };
+
+  // Apply stored preference (icon sync — attribute already set by inline script)
+  const storedTheme = localStorage.getItem('theme') || 'dark';
+  applyTheme(storedTheme);
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
+      const next = isDark ? 'light' : 'dark';
+      applyTheme(next);
+      localStorage.setItem('theme', next);
+    });
+  }
+
+  /**
    * Topbar scrolled state
    */
   const topbar = select('#topbar');
@@ -107,6 +136,10 @@
     };
     window.addEventListener('load', toggleBacktotop);
     window.addEventListener('scroll', toggleBacktotop);
+    backtotop.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
   }
 
   /**
