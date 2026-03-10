@@ -169,4 +169,35 @@
     });
   });
 
+  /**
+   * Page view counter
+   */
+  (async () => {
+    const WORKER_URL = 'https://jolly-sky-5ae9.sandhyadilip88.workers.dev';
+    const badge = document.getElementById('view-count');
+    const numEl = document.getElementById('view-number');
+    if (!badge || !numEl) return;
+
+    try {
+      const res = await fetch(`${WORKER_URL}/views`);
+      if (!res.ok) return;
+      const { views } = await res.json();
+
+      // Count-up animation
+      const target = views;
+      const duration = 1200;
+      const start = performance.now();
+      const step = (now) => {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+        numEl.textContent = Math.floor(eased * target).toLocaleString();
+        if (progress < 1) requestAnimationFrame(step);
+        else numEl.textContent = target.toLocaleString();
+      };
+
+      badge.style.opacity = '1';
+      requestAnimationFrame(step);
+    } catch { /* silently fail — counter is non-critical */ }
+  })();
+
 })();
