@@ -50,6 +50,13 @@
       'projects.eyebrow': 'Work',
       'projects.heading': 'Projects & Highlights',
 
+      // Project filters
+      'filter.all':      'All',
+      'filter.cv':       'Computer Vision',
+      'filter.llm':      'LLM / NLP',
+      'filter.ml':       'Machine Learning',
+      'filter.robotics': 'Robotics',
+
       'proj1.tag':      'Computer Vision · Industry',
       'proj1.title':    'Equipment Anomaly Detection System',
       'proj1.desc':     'Developed a computer vision system to detect anomalies in temperature and humidity controllers for a leading semiconductor manufacturer. Enables timely maintenance and prevents unplanned production downtime. Deployed in a real-time manufacturing environment at Quest Global Japan.',
@@ -209,6 +216,13 @@
       // Projects
       'projects.eyebrow': '実績',
       'projects.heading': 'プロジェクト & ハイライト',
+
+      // Project filters
+      'filter.all':      'すべて',
+      'filter.cv':       'コンピュータビジョン',
+      'filter.llm':      'LLM / NLP',
+      'filter.ml':       '機械学習',
+      'filter.robotics': 'ロボティクス',
 
       'proj1.tag':      'コンピュータビジョン · 産業',
       'proj1.title':    '設備異常検知システム',

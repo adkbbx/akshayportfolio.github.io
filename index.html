@@ -10,7 +10,7 @@
   <meta content="data scientist, machine learning engineer, AI engineer, computer vision, agentic AI, Tokyo, Japan" name="keywords">
 
   <!-- Theme: apply saved preference before first paint to prevent flash -->
-  <script>(function(){var t=localStorage.getItem('theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');})()</script>
+  <script>(function(){var t=localStorage.getItem('theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(!t&&window.matchMedia('(prefers-color-scheme:light)').matches)document.documentElement.setAttribute('data-theme','light');})()</script>
   <!-- Lang: apply saved preference before first paint -->
   <script>(function(){var l=localStorage.getItem('lang');if(l==='ja')document.documentElement.setAttribute('data-lang','ja');})()</script>
 
@@ -61,7 +61,7 @@
   <main id="main">
 
     <!-- ======= Hero Section ======= -->
-    <section id="hero">
+    <section id="hero" class="noise-overlay">
       <div class="hero-orb"></div>
       <div class="hero-container" data-aos="fade-up" data-aos-duration="800">
         <p class="hero-eyebrow" data-i18n="hero.eyebrow">Data Scientist &amp; AI/ML Engineer · Tokyo, Japan</p>
@@ -76,7 +76,7 @@
     </section><!-- End Hero -->
 
     <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+    <section id="about" class="about noise-overlay">
       <div class="section-container">
         <p class="section-eyebrow" data-i18n="about.eyebrow">About Me</p>
         <h2 class="section-heading" data-i18n="about.heading">Turning data into intelligent systems.</h2>
@@ -118,7 +118,7 @@
     </section><!-- End About Section -->
 
     <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills">
+    <section id="skills" class="skills noise-overlay">
       <div class="section-container">
         <p class="section-eyebrow" data-i18n="skills.eyebrow">Technical Skills</p>
         <h2 class="section-heading" data-i18n="skills.heading">Languages &amp; Technologies</h2>
@@ -190,15 +190,23 @@
     </section><!-- End Skills Section -->
 
     <!-- ======= Projects Section ======= -->
-    <section id="projects" class="projects">
+    <section id="projects" class="projects noise-overlay">
       <div class="section-container">
         <p class="section-eyebrow" data-i18n="projects.eyebrow">Work</p>
         <h2 class="section-heading" data-i18n="projects.heading">Projects &amp; Highlights</h2>
 
+        <div class="project-filters" data-aos="fade-up" data-aos-duration="400">
+          <button class="filter-btn active" data-filter="all"      data-i18n="filter.all">All</button>
+          <button class="filter-btn"        data-filter="cv"       data-i18n="filter.cv">Computer Vision</button>
+          <button class="filter-btn"        data-filter="llm"      data-i18n="filter.llm">LLM / NLP</button>
+          <button class="filter-btn"        data-filter="ml"       data-i18n="filter.ml">Machine Learning</button>
+          <button class="filter-btn"        data-filter="robotics" data-i18n="filter.robotics">Robotics</button>
+        </div>
+
         <div class="bento-grid" data-aos="fade-up" data-aos-duration="600">
 
           <!-- Equipment Anomaly Detection — featured (spans 2 cols) -->
-          <article class="bento-card bento-card--featured">
+          <article class="bento-card bento-card--featured" data-category="cv">
             <div class="bento-card-header">
               <span class="bento-tag" data-i18n="proj1.tag">Computer Vision · Industry</span>
             </div>
@@ -213,7 +221,7 @@
           </article>
 
           <!-- Predictive Maintenance -->
-          <article class="bento-card">
+          <article class="bento-card" data-category="ml">
             <div class="bento-card-header">
               <span class="bento-tag" data-i18n="proj2.tag">Predictive Maintenance</span>
             </div>
@@ -227,7 +235,7 @@
           </article>
 
           <!-- Power BI + LLM Chatbot — wide (spans 2 cols) -->
-          <article class="bento-card bento-card--wide">
+          <article class="bento-card bento-card--wide" data-category="llm">
             <div class="bento-card-header">
               <span class="bento-tag" data-i18n="proj3.tag">Analytics · LLM Integration</span>
             </div>
@@ -242,7 +250,7 @@
           </article>
 
           <!-- LLM Text to SQL -->
-          <article class="bento-card">
+          <article class="bento-card" data-category="llm">
             <div class="bento-card-header">
               <span class="bento-tag" data-i18n="proj4.tag">LLM / NLP</span>
               <a href="https://github.com/adkbbx/ML_Projects/tree/main/TexttoSQL_LLM_APP" class="bento-link" aria-label="View project"><i class="bi bi-arrow-up-right"></i></a>
@@ -257,7 +265,7 @@
           </article>
 
           <!-- ANPR -->
-          <article class="bento-card">
+          <article class="bento-card" data-category="cv">
             <div class="bento-card-header">
               <span class="bento-tag" data-i18n="proj5.tag">Computer Vision · Edge AI</span>
             </div>
@@ -271,7 +279,7 @@
           </article>
 
           <!-- Darts Keypoint Detection -->
-          <article class="bento-card">
+          <article class="bento-card" data-category="cv">
             <div class="bento-card-header">
               <span class="bento-tag" data-i18n="proj6.tag">Keypoint Detection · Edge</span>
             </div>
@@ -285,7 +293,7 @@
           </article>
 
           <!-- Farm Animal Segmentation -->
-          <article class="bento-card">
+          <article class="bento-card" data-category="cv">
             <div class="bento-card-header">
               <span class="bento-tag" data-i18n="proj7.tag">Segmentation · TF.js</span>
             </div>
@@ -299,7 +307,7 @@
           </article>
 
           <!-- Recommendation System -->
-          <article class="bento-card">
+          <article class="bento-card" data-category="ml">
             <div class="bento-card-header">
               <span class="bento-tag" data-i18n="proj8.tag">Machine Learning</span>
               <a href="https://github.com/adkbbx/ML_Projects/tree/main/Recommendersystem" class="bento-link" aria-label="View project"><i class="bi bi-arrow-up-right"></i></a>
@@ -314,7 +322,7 @@
           </article>
 
           <!-- ArtPark Competition -->
-          <article class="bento-card">
+          <article class="bento-card" data-category="robotics">
             <div class="bento-card-header">
               <span class="bento-tag" data-i18n="proj9.tag">Robotics · Competition</span>
               <a href="https://drive.google.com/file/d/1LbqKXVWOzf3ZVT27PYgBk14AnDNlbnXO/view?usp=sharing" class="bento-link" aria-label="View certificate"><i class="bi bi-arrow-up-right"></i></a>
@@ -333,7 +341,7 @@
     </section><!-- End Projects Section -->
 
     <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume">
+    <section id="resume" class="resume noise-overlay">
       <div class="section-container">
         <p class="section-eyebrow" data-i18n="resume.eyebrow">Background</p>
         <h2 class="section-heading" data-i18n="resume.heading">Experience &amp; Education</h2>
@@ -464,7 +472,7 @@
     </section><!-- End Resume Section -->
 
     <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact noise-overlay">
       <div class="section-container">
         <div class="contact-inner" data-aos="fade-up" data-aos-duration="600">
           <p class="section-eyebrow" data-i18n="contact.eyebrow">Contact</p>
@@ -570,6 +578,7 @@
 
   <!-- AI Chat Widget -->
   <script src="assets/js/chat.js"></script>
+
 
 </body>
 

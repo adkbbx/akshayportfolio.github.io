@@ -26,7 +26,9 @@
   };
 
   // Apply stored preference (icon sync — attribute already set by inline script)
-  const storedTheme = localStorage.getItem('theme') || 'dark';
+  // Falls back to OS preference, then dark as default
+  const storedTheme = localStorage.getItem('theme') ||
+    (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
   applyTheme(storedTheme);
 
   if (themeToggle) {
@@ -154,6 +156,26 @@
       typeSpeed: 80,
       backSpeed: 40,
       backDelay: 2000
+    });
+  }
+
+  /**
+   * Project filter chips
+   */
+  const filterBtns = select('.filter-btn', true);
+  const bentoCards = select('.bento-card', true);
+
+  if (filterBtns.length && bentoCards.length) {
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        bentoCards.forEach(card => {
+          const show = filter === 'all' || card.dataset.category === filter;
+          show ? card.removeAttribute('hidden') : card.setAttribute('hidden', '');
+        });
+      });
     });
   }
 
