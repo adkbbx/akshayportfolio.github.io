@@ -1,4 +1,33 @@
-# Portfolio Website
-Welcome to my portfolio website repository! This repository contains the source code and assets for my personal portfolio website. The website is designed to showcase my skills, projects, and experiences.
+# Akshay Dilip Kumar — Personal Portfolio
 
-[Click here](https://adkbbx.github.io/akshayportfolio.github.io/) to check out my website. 
+Personal portfolio website showcasing my work as a Data Scientist and AI/ML Engineer based in Tokyo, Japan.
+
+**Live site:** [adkbbx.github.io/akshayportfolio.github.io](https://adkbbx.github.io/akshayportfolio.github.io/)
+
+## Features
+
+- Dark and light mode
+- Japanese and English language support
+- AI chat assistant powered by OpenRouter
+- Responsive, modern design
+- Scroll animations and typewriter effect
+
+## Tech Stack
+
+- Pure HTML, CSS, JavaScript — no build step
+- Bootstrap 5, AOS, Typed.js
+- Hosted on GitHub Pages
+- AI chat via Cloudflare Worker proxy to OpenRouter
+
+## Local Development
+
+```bash
+python -m http.server 8080
+# visit http://localhost:8080
+```
+
+Or just open `index.html` directly in a browser.
+
+## Deployment
+
+Push to `master` — GitHub Pages serves automatically.
