@@ -408,7 +408,7 @@ html[data-lang="ja"] body {
   pointer-events: none;
 }
 
-.hero-orb {
+#hero .hero-orb {
   position: absolute;
   top: -100px;
   right: -100px;
@@ -426,6 +426,7 @@ html[data-lang="ja"] body {
   margin: 0 auto;
   padding: 0 24px;
   width: 100%;
+  text-align: left;
 }
 
 .hero-eyebrow {

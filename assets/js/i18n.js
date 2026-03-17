@@ -30,7 +30,7 @@
       'about.heading':        'Turning data into intelligent systems.',
       'about.role':           'Data Scientist @ Rakuten',
       'about.bio1':           "I'm an Electrical Engineering graduate from India who discovered my passion in Data Science, AI, and Machine Learning. While my academic foundation is in electrical engineering, I was drawn to the limitless possibilities of intelligent systems and the incredible impact they can have on people's lives.",
-      'about.bio2-html':      'Currently a Data Scientist at Rakuten in Tokyo, I bring experience across the full ML lifecycle — from building computer vision systems and predictive maintenance models at a semiconductor manufacturer, to deploying production ML pipelines and agentic AI workflows. I hold a <strong>JLPT N2</strong> Japanese language certification and have been based in Japan since 2022.',
+      'about.bio2-html':      'Currently a Data Scientist at Rakuten in Tokyo, I bring experience across the full ML lifecycle, from building computer vision systems and predictive maintenance models at a semiconductor manufacturer to deploying production ML pipelines and agentic AI workflows. I hold a <strong>JLPT N2</strong> Japanese language certification and have been based in Japan since 2022.',
       'about.badge-location': 'Tokyo, Japan',
       'about.badge-lang':     'JLPT N2',
       'about.badge-company':  'Rakuten',
@@ -68,22 +68,22 @@
       'proj3.desc':     "Designed executive Power BI dashboards to analyze service trends and reduce machine service costs. Built a custom Power BI chat bot visual integrating the company's Azure LLM API, enabling field engineers to query production data in natural language directly within the dashboard for real-time insights.",
       'proj4.tag':      'LLM / NLP',
       'proj4.title':    'LLM Based Text to SQL App',
-      'proj4.desc':     "Empowers anyone to extract insights from databases by translating natural language questions into accurate SQL queries — including complex conditions and nesting. Powered by Google AI's Gemini LLM.",
+      'proj4.desc':     "Empowers anyone to extract insights from databases by translating natural language questions into accurate SQL queries, including complex conditions and nesting. Powered by Google AI's Gemini LLM.",
       'proj5.tag':      'Computer Vision · Edge AI',
       'proj5.title':    'Automatic Number Plate Recognition',
-      'proj5.desc-html':'Enhanced ANPR model by narrowing detection scope, optimizing neural architecture, and compiling for fast inference — improving accuracy 96% → <strong style="color:var(--text-primary)">99.5%</strong> and latency 250ms → <strong style="color:var(--text-primary)">5.6ms</strong>.',
+      'proj5.desc-html':'Enhanced ANPR model by narrowing detection scope, optimizing neural architecture, and compiling for fast inference, improving accuracy 96% → <strong style="color:var(--text-primary)">99.5%</strong> and latency 250ms → <strong style="color:var(--text-primary)">5.6ms</strong>.',
       'proj6.tag':      'Keypoint Detection · Edge',
       'proj6.title':    'Darts Keypoint Detection System',
       'proj6.desc':     'Maps the landing point of a dart on a dartboard for automatic scoring. Optimized for edge devices via ONNX conversion, enabling real-time inference on resource-constrained hardware.',
       'proj7.tag':      'Segmentation · TF.js',
       'proj7.title':    'Farm Animal Dimension Estimator',
-      'proj7.desc':     'Image segmentation web app that detects and estimates the length of farm animals using PCA on segmentation masks. Deployed entirely in-browser using TensorFlow.js — no backend required.',
+      'proj7.desc':     'Image segmentation web app that detects and estimates the length of farm animals using PCA on segmentation masks. Deployed entirely in-browser using TensorFlow.js with no backend required.',
       'proj8.tag':      'Machine Learning',
       'proj8.title':    'Recommendation System',
       'proj8.desc':     'Book and Movie recommendation systems using collaborative filtering, popularity-based, and content-based algorithms.',
       'proj9.tag':      'Robotics · Competition',
       'proj9.title':    'ArtPark Robotics Competition',
-      'proj9.desc-html':'Hardware stack for a Janitor Robot at the IISc-hosted ArtPark competition — qualified proposal round, placing in the <strong style="color:var(--text-primary)">top 29 teams</strong> in India.',
+      'proj9.desc-html':'Hardware stack for a Janitor Robot at the IISc-hosted ArtPark competition. Qualified in the proposal round, placing in the <strong style="color:var(--text-primary)">top 29 teams</strong> in India.',
 
       // Resume
       'resume.eyebrow':  'Background',
@@ -110,7 +110,7 @@
       'work3.li1':   'Built in-browser ML apps using TensorFlow.js (classification model builder, farm animal segmentation).',
       'work3.li2':   'Developed Darts keypoint detection system optimized for edge devices via ONNX.',
       'work3.li3':   'Enhanced ANPR model accuracy from 96% to 99.5% and latency from 250ms to 5.6ms.',
-      'work4.role':  'Research Intern — 3D Keypoint Detection',
+      'work4.role':  'Research Intern: 3D Keypoint Detection',
       'work4.date':  'Nov 2021 – Oct 2022',
       'work4.org':   'SOHGA Co., Ltd · Tokyo, Japan',
       'work4.desc':  'Researched 3D keypoint detection using monocular cameras.',
@@ -125,11 +125,11 @@
       'work6.li1':   'Labeled 2000+ camera feed images daily for computer vision model training.',
       'work6.li2':   'Promoted to QC in 2 months for reaching benchmark annotation accuracy.',
 
-      'edu1.role':   'B.Tech — Electrical & Electronics Engineering',
+      'edu1.role':   'B.Tech in Electrical & Electronics Engineering',
       'edu1.date':   '2018 – 2022',
       'edu1.badge':  'CGPA 9.2 / 10',
       'edu1.org':    'REVA University, Bangalore, India',
-      'cert1.role':  'Japanese Language Proficiency — JLPT N2',
+      'cert1.role':  'Japanese Language Proficiency (JLPT N2)',
       'cert1.org':   'Japan Foundation',
       'cert2.role':  'AI Coder: Vibe Coder to Agentic Engineer',
       'cert2.date':  'Mar 2026',
@@ -153,7 +153,7 @@
       // Contact
       'contact.eyebrow':        'Contact',
       'contact.heading':        "Let's work together.",
-      'contact.subtext':        "I'm open to new opportunities, collaborations, and interesting projects. Based in Tokyo — feel free to reach out in English or Japanese.",
+      'contact.subtext':        "I'm open to new opportunities, collaborations, and interesting projects. Based in Tokyo, feel free to reach out in English or Japanese.",
       'contact.email-label':    'Email',
       'contact.linkedin-label': 'LinkedIn',
       'contact.github-label':   'GitHub',
@@ -165,7 +165,7 @@
       'chat.toggle-label':    'Ask about me',
       'chat.header-name':     "Akshay's AI",
       'chat.header-status':   'Online',
-      'chat.greeting':        "Hi! I'm Akshay's AI assistant. Ask me anything about his background, projects, or skills — or how to get in touch.",
+      'chat.greeting':        "Hi! I'm Akshay's AI assistant. Ask me anything about his background, projects, skills, or how to get in touch.",
       'chat.placeholder':     'Ask about Akshay…',
       'chat.suggestion1':     'What projects has Akshay built?',
       'chat.suggestion2':     'What are his skills?',
@@ -244,7 +244,7 @@
       'proj6.desc':     '自動スコアリングのため、ダーツボード上のダーツ着弾点をマッピング。ONNXへの変換によりエッジデバイス向けに最適化し、リソース制約のあるハードウェア上でリアルタイム推論を実現。',
       'proj7.tag':      'セグメンテーション · TF.js',
       'proj7.title':    '農場動物寸法推定システム',
-      'proj7.desc':     'セグメンテーションマスクにPCAを適用して農場動物を検出・体長推定する画像セグメンテーションWebアプリ。TensorFlow.jsを使用してブラウザ内で完結—バックエンド不要。',
+      'proj7.desc':     'セグメンテーションマスクにPCAを適用して農場動物を検出・体長推定する画像セグメンテーションWebアプリ。TensorFlow.jsを使用してブラウザ内で完結。バックエンド不要。',
       'proj8.tag':      '機械学習',
       'proj8.title':    'レコメンデーションシステム',
       'proj8.desc':     '協調フィルタリング、人気度ベース、コンテンツベースのアルゴリズムを使った書籍・映画推薦システム。',
@@ -277,7 +277,7 @@
       'work3.li1':   'TensorFlow.jsを使ったブラウザ内MLアプリを構築（分類モデルビルダー、農場動物セグメンテーション）。',
       'work3.li2':   'ONNXによりエッジデバイス向けに最適化されたダーツキーポイント検出システムを開発。',
       'work3.li3':   'ANPRモデルの精度を96%から99.5%に、レイテンシを250msから5.6msに改善。',
-      'work4.role':  'リサーチインターン — 3Dキーポイント検出',
+      'work4.role':  'リサーチインターン：3Dキーポイント検出',
       'work4.date':  '2021年11月 – 2022年10月',
       'work4.org':   'SOHGA株式会社 · 東京、日本',
       'work4.desc':  '単眼カメラを使った3Dキーポイント検出を研究。',
@@ -292,11 +292,11 @@
       'work6.li1':   'コンピュータビジョンモデルのトレーニング用に、毎日2000枚以上のカメラ映像画像にラベリング。',
       'work6.li2':   'アノテーション精度のベンチマーク達成により、2ヶ月でQCに昇格。',
 
-      'edu1.role':   'B.Tech — 電気電子工学',
+      'edu1.role':   'B.Tech（電気電子工学）',
       'edu1.date':   '2018年 – 2022年',
       'edu1.badge':  'GPA 9.2 / 10',
       'edu1.org':    'REVA大学、バンガロール、インド',
-      'cert1.role':  '日本語能力試験 — JLPT N2',
+      'cert1.role':  '日本語能力試験（JLPT N2）',
       'cert1.org':   '日本国際教育支援協会',
       'cert2.role':  'AIコーダー：バイブコーディングからエージェントエンジニアへ',
       'cert2.date':  '2026年3月',
@@ -320,7 +320,7 @@
       // Contact
       'contact.eyebrow':        'お問い合わせ',
       'contact.heading':        '一緒に働きましょう。',
-      'contact.subtext':        '新しい機会・コラボレーション・面白いプロジェクトを歓迎しています。東京在住 — 日本語または英語でお気軽にご連絡ください。',
+      'contact.subtext':        '新しい機会・コラボレーション・面白いプロジェクトを歓迎しています。東京在住。日本語または英語でお気軽にご連絡ください。',
       'contact.email-label':    'メール',
       'contact.linkedin-label': 'LinkedIn',
       'contact.github-label':   'GitHub',
@@ -408,7 +408,7 @@
     // Update lang toggle button text
     const btn = document.querySelector('.lang-toggle');
     if (btn) {
-      btn.textContent = lang === 'ja' ? 'EN' : 'JP';
+      btn.textContent = lang === 'ja' ? 'EN' : '日本';
       btn.setAttribute('aria-label', lang === 'ja' ? 'Switch to English' : '日本語に切り替える');
     }
 

@@ -41,6 +41,17 @@
   }
 
   /**
+   * Throttle helper — limits fn to at most once per `delay` ms
+   */
+  const throttle = (fn, delay) => {
+    let last = 0;
+    return (...args) => {
+      const now = Date.now();
+      if (now - last >= delay) { last = now; fn(...args); }
+    };
+  };
+
+  /**
    * Topbar scrolled state
    */
   const topbar = select('#topbar');
@@ -49,7 +60,7 @@
       topbar.classList.toggle('scrolled', window.scrollY > 20);
     }
   };
-  window.addEventListener('scroll', updateTopbar);
+  window.addEventListener('scroll', throttle(updateTopbar, 100));
   updateTopbar();
 
   /**
@@ -125,7 +136,7 @@
       }
     });
   };
-  window.addEventListener('scroll', updateActiveLink);
+  window.addEventListener('scroll', throttle(updateActiveLink, 100));
   window.addEventListener('load', updateActiveLink);
 
   /**
